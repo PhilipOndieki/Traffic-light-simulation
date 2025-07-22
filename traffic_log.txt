@@ -1,0 +1,39 @@
+---- Traffic Light log ----
+Time of Day: 7
+Cars Waiting: 23
+Emergency Vehicle: no
+Decision: Longer green light
+---------------------------
+
+---- Traffic Light log ----
+Time of Day: 8
+Cars Waiting: 16
+Emergency Vehicle: yes
+---- Traffic Light log ----
+Time of Day: 8
+Cars Waiting: 14
+Emergency Vehicle: yes
+Decision: Green light immediately(emergency 🚨)
+---------------------------
+
+---- Traffic Light log ----
+Time of Day: 9
+Cars Waiting: 22
+Emergency Vehicle: no
+Decision: Longer green light
+---------------------------
+
+---- Traffic Light log ----
+Time of Day: 11
+Cars Waiting: 5
+Emergency Vehicle: no
+Decision: standard cycle
+---------------------------
+
+---- Traffic Light log ----
+Time of Day: 21
+Cars Waiting: 0
+Emergency Vehicle: no
+Decision: Flashing yellow light(Night mode no traffic)
+---------------------------
+
