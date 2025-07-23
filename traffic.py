@@ -1,16 +1,17 @@
 import time
 
+#main function to determine traffic light status
 def traffic_logic(time_of_day, cars_waiting, emergency_vehicle):
     #emergency override
     if emergency_vehicle == 'yes':
         return "Green light immediately(emergency 🚨)"
     
-    # Invalidate if not in range(1 to 24)
-    if not (1 <= time_of_day <= 24):
+    # Invalidate if not in range(0 to 2400) simulates 24-hour format)
+    if not (0 <= time_of_day <= 2400):
         return "Invalid time of day(please enter a number between 1 and 24)"
         
     # night with no traffic
-    if time_of_day >= 20 and cars_waiting == 0:
+    if time_of_day >= 2000 and cars_waiting == 0:
         return "Flashing yellow light(Night mode no traffic)"
         
     # day with traffic
@@ -20,7 +21,7 @@ def traffic_logic(time_of_day, cars_waiting, emergency_vehicle):
     #default case
     return "standard cycle"
 
-# 🚦 Light simulation
+# 🚦 Light simulation function
 def simulate_light_cycle(mode):
     print("\n 🚦 ----simulating traffic lights---\n")
 
@@ -56,7 +57,7 @@ def simulate_light_cycle(mode):
     else : 
         print("⚠️ Something went wrong.")
 
-# add the decision to a txt file
+# Function to add the decision to a txt file
 def log_decision(time_of_day, cars_waiting, emergency_vehicle, status):
     with open("traffic_log.txt", "a", encoding="utf-8") as log_file:
         log_file.write("---- Traffic Light log ----\n")
@@ -73,7 +74,7 @@ while True:
 
     try:
         #Get user input
-        time_of_day = int(input("Enter the time of day (1 to 24): "))
+        time_of_day = int(input("Enter the time of day (0 to 2400): "))
         cars_waiting = int(input("Enter the number of cars waiting at the traffic light: "))
         emergency_vehicle = input("Is there an emergency vehicle approaching? (yes/no): ").strip().lower()
     except ValueError:

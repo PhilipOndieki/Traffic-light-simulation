@@ -37,3 +37,10 @@ Emergency Vehicle: no
 Decision: Flashing yellow light(Night mode no traffic)
 ---------------------------
 
+---- Traffic Light log ----
+Time of Day: 800
+Cars Waiting: 12
+Emergency Vehicle: no
+Decision: Longer green light
+---------------------------
+
